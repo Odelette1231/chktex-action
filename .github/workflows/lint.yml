@@ -19,4 +19,4 @@ jobs:
       run: sudo apt-get install chktex
 
     - name: Run chktex
-      run: chktex elsarticle-template24_10_12_23.tex
+      run: chktex D:\TeX_File\文件夹1\elsarticle-template\elsarticle-template\elsarticle-template24_10_12_23.tex
