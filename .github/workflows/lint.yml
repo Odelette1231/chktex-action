@@ -1,0 +1,22 @@
+name: Lint LaTeX
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Install chktex
+      run: sudo apt-get install chktex
+
+    - name: Run chktex
+      run: chktex **/*.tex
